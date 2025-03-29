@@ -85,7 +85,7 @@ public class ExpenseControllerImpl implements ExpenseController {
             } else if (ExpenseUtilConstant.FAIL.equals(response.get(ExpenseUtilConstant.STATUS))) {
                 return ResponseEntity.internalServerError().body(response);
             } else {
-                response.put("message", "Please try again later.");
+                response.put("message", "Please try after sometime.");
                 response.put("status", 500);
                 return ResponseEntity.internalServerError().body(response);
             }
